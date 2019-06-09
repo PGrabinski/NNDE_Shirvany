@@ -188,14 +188,15 @@ def harmonic_analytic(X, n, **kwargs):
 def eigen_value_harmonic(n, **kwargs):
     return n + 0.5
 
-def train_plot_save(loss_function, eigen_value_function, analytic_solution, name, n, id, domain, learning_rate=0.01, n_h=105 ):
+def train_plot_save(loss_function, eigen_value_function, analytic_solution, name, n, id, domain, learning_rate=0.001, n_h=105,
+    epochs=100000):
     sol = Solution(n_i=1, n_h=n_h, n_o=2)
     X_train, X_test = train_test_domain_a_to_b(*domain, 200)
     bcs = zero_boundary_conditions(*domain)
     a = domain[0]
     b = domain[1]
     sol.train(X=X_train, conditions=bcs, eigen_value=eigen_value_function(n, L=b-a), loss_function=loss_function,
-            epochs=100000, verbose=False, boundary_multiplier=0.1,
+            epochs=epochs, verbose=False, boundary_multiplier=0.1,
             learning_rate=learning_rate, optimizer_name='Adam')
     y_train = sol(tf.convert_to_tensor(X_train)).numpy()
     train_normalization = (y_train**2).sum()*(b-a)/y_train.shape[0]

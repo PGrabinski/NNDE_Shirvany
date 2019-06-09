@@ -7,6 +7,6 @@ for n in range(1, 7):
                                     eigen_value_function=naive_nde.eigen_value_well,
                                     analytic_solution=naive_nde.well_analytic,
                                     name='Quantum Potential Well',
-                                    n=n, id=id, domain=(0,4.)
+                                    n=n, id=id, domain=(0,4.), learning_rate=0.001
                                 )
         print('Done', n,id)
