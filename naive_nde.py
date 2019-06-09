@@ -175,6 +175,31 @@ def loss_harmonic(network, X, eigen_value):
     
     return tf.math.reduce_mean(loss)
 
+def loss_harmonic_unity(network, X, eigen_value):
+    X = tf.convert_to_tensor(X)
+  
+    with tf.GradientTape() as tape1:
+        with tf.GradientTape() as tape2:
+            tape1.watch(X)
+            tape2.watch(X)
+            response = network(X)
+        grads = tape2.gradient(response, X)
+    laplace = tape1.gradient(grads, X)
+    
+    nabla = tf.reshape(laplace, shape=(-1,))
+    psi = tf.reshape(response, shape=(-1,))
+    x = tf.reshape(X, shape=(-1,))
+    
+    eigen_value_tensor = tf.constant(eigen_value, shape=(X.shape[0], ), dtype='float64')
+    
+    loss = tf.square(0.5*nabla + (eigen_value_tensor - 0.5*x** 2) * psi)
+    
+    interval = X[1]-X[0]
+    probability_unity = tf.math.reduce_sum(response**2) * interval 
+    probability_unity = (probability_unity - 1) **2
+    loss = tf.math.reduce_mean(loss) + probability_unity
+    return loss
+
 def harmonic_analytic(X, n, **kwargs):
     # degree parameter of the polynomial
     c = np.zeros((n+1))
