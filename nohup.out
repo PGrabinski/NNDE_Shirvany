@@ -148,3 +148,83 @@ Starting 6 8
 Done 6 8
 Starting 6 9
 Done 6 9
+2019-06-09 20:17:00.465992: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-09 20:17:00.466227: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-09 20:17:00.466278: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-09 20:17:00.466715: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-09 20:17:00.479511: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-09 20:17:00.480443: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55872dbf1ab0 executing computations on platform Host. Devices:
+2019-06-09 20:17:00.480481: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0609 20:17:01.320412 139908707268416 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0609 20:17:01.512754 139908707268416 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-09 20:17:04.680478: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-09 20:17:13.630256: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-09 20:17:13.630339: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-09 20:17:13.630389: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-09 20:17:13.630870: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-09 20:17:13.646392: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-09 20:17:13.647516: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x559a7d75e950 executing computations on platform Host. Devices:
+2019-06-09 20:17:13.647643: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0609 20:17:14.418324 140472081352512 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0609 20:17:15.588426 140472081352512 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-09 20:17:17.456710: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-10 00:32:23.693106: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-10 00:32:23.693193: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-10 00:32:23.693254: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-10 00:32:23.693727: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-10 00:32:23.708866: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-10 00:32:23.709860: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55efc1a5edd0 executing computations on platform Host. Devices:
+2019-06-10 00:32:23.709927: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0610 00:32:24.635092 140152901650240 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0610 00:32:24.834090 140152901650240 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-10 00:32:27.983675: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-10 00:32:34.105643: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-10 00:32:34.105742: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-10 00:32:34.105812: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-10 00:32:34.106302: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-10 00:32:34.122292: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-10 00:32:34.123296: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558675778b90 executing computations on platform Host. Devices:
+2019-06-10 00:32:34.123375: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0610 00:32:34.819359 139997540276032 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0610 00:32:35.082440 139997540276032 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-10 00:32:37.919412: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Starting 1 0
+Done 1 0
+Starting 1 1
+Done 1 1
+Starting 1 2
+Done 1 2
+Starting 1 3
+Done 1 3
+Starting 1 4
+Done 1 4
+Starting 2 0
+Done 2 0
+Starting 2 1
+Done 2 1
+Starting 2 2
+Done 2 2
+Starting 2 3
+Done 2 3
+Starting 2 4
+Done 2 4
