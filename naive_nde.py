@@ -213,8 +213,8 @@ def harmonic_analytic(X, n, **kwargs):
 def eigen_value_harmonic(n, **kwargs):
     return n + 0.5
 
-def train_plot_save(loss_function, eigen_value_function, analytic_solution, name, n, id, domain, learning_rate=0.001, n_h=105,
-    epochs=100000):
+def train_plot_save(loss_function, eigen_value_function, analytic_solution, dir, name, n, id, domain, learning_rate=0.001, n_h=105,
+    epochs=100000, normalize=True):
     sol = Solution(n_i=1, n_h=n_h, n_o=2)
     X_train, X_test = train_test_domain_a_to_b(*domain, 200)
     bcs = zero_boundary_conditions(*domain)
@@ -224,11 +224,13 @@ def train_plot_save(loss_function, eigen_value_function, analytic_solution, name
             epochs=epochs, verbose=False, boundary_multiplier=0.1,
             learning_rate=learning_rate, optimizer_name='Adam')
     y_train = sol(tf.convert_to_tensor(X_train)).numpy()
-    train_normalization = (y_train**2).sum()*(b-a)/y_train.shape[0]
-    y_train /= train_normalization
+    if normalize:
+        train_normalization = (y_train**2).sum()*(b-a)/y_train.shape[0]
+        y_train /= train_normalization
     y_test = sol(tf.convert_to_tensor(X_test)).numpy()
-    test_normalization = (y_test**2).sum()*(b-a)/y_test.shape[0]
-    y_test /= test_normalization
+    if normalize:
+        test_normalization = (y_test**2).sum()*(b-a)/y_test.shape[0]
+        y_test /= test_normalization
     plt.clf()
     plt.scatter(X_train, y_train, c='r', label='Numerical - Training', marker='x', s=800)
     plt.plot(X_test, y_test, c='xkcd:sky blue', label='Numerical - Test', marker='x', linewidth=5)
@@ -239,7 +241,7 @@ def train_plot_save(loss_function, eigen_value_function, analytic_solution, name
     plt.title(f'{name} for n={n}', fontsize='60')
     plt.gcf().set_size_inches(30, 22.5)
     plt.tick_params(axis='both', which='major', labelsize=35)
-    path = os.path.join('plots', name)
+    path = os.path.join('plots', dir)
     if not os.path.exists('plots'):
         os.makedirs('plots')
     if not os.path.exists(path):
