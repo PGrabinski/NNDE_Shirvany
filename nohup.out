@@ -588,3 +588,831 @@ Starting 6 8
 Done 6 8
 Starting 6 9
 Done 6 9
+Traceback (most recent call last):
+  File "well_controller.py", line 1, in <module>
+    import naive_nde
+  File "/home/pgrabinski/NNDE_Shirvany/naive_nde.py", line 1, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
+Traceback (most recent call last):
+  File "well_normalized_controller.py", line 1, in <module>
+    import naive_nde
+  File "/home/pgrabinski/NNDE_Shirvany/naive_nde.py", line 1, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
+Traceback (most recent call last):
+  File "well_unity_controller.py", line 1, in <module>
+    import naive_nde
+  File "/home/pgrabinski/NNDE_Shirvany/naive_nde.py", line 1, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
+2019-06-11 20:55:11.301390: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-11 20:55:11.301460: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-11 20:55:11.301510: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-11 20:55:11.301962: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-11 20:55:11.314974: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-11 20:55:11.315951: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5603ee30fc20 executing computations on platform Host. Devices:
+2019-06-11 20:55:11.315986: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0611 20:55:11.979343 140606768064320 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0611 20:55:12.213010 140606768064320 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-11 20:55:14.935356: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-11 20:55:17.765746: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-11 20:55:17.765808: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-11 20:55:17.765849: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-11 20:55:17.766216: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-11 20:55:17.779938: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-11 20:55:17.781751: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56373fb338c0 executing computations on platform Host. Devices:
+2019-06-11 20:55:17.781792: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0611 20:55:18.450668 139929414526784 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0611 20:55:18.678356 139929414526784 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-11 20:55:21.450619: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-11 20:55:22.838500: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-11 20:55:22.838571: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-11 20:55:22.838621: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-11 20:55:22.839066: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-11 20:55:22.852809: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-11 20:55:22.853723: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55db5f4027e0 executing computations on platform Host. Devices:
+2019-06-11 20:55:22.853759: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0611 20:55:23.693338 140588941027136 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0611 20:55:23.878889 140588941027136 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-11 20:55:27.054551: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-11 20:55:43.926517: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-11 20:55:43.926602: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-11 20:55:43.926655: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-11 20:55:43.927140: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-11 20:55:43.942533: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-11 20:55:43.943517: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5557aa5dc370 executing computations on platform Host. Devices:
+2019-06-11 20:55:43.943567: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0611 20:55:44.700547 140057719019328 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0611 20:55:45.870403 140057719019328 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-11 20:55:47.734125: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-11 20:55:51.166001: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-11 20:55:51.166087: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-11 20:55:51.166170: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-11 20:55:51.166784: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-11 20:55:51.180990: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-11 20:55:51.182886: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5580604e38c0 executing computations on platform Host. Devices:
+2019-06-11 20:55:51.182918: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0611 20:55:51.963849 139835415582528 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0611 20:55:53.203103 139835415582528 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-11 20:55:55.143440: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-06-11 20:56:00.213869: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-06-11 20:56:00.213947: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-06-11 20:56:00.213995: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-06-11 20:56:00.214444: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-11 20:56:00.229768: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-06-11 20:56:00.230910: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5643d20468c0 executing computations on platform Host. Devices:
+2019-06-11 20:56:00.231008: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0611 20:56:01.190457 140185218389824 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0611 20:56:01.392802 140185218389824 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-06-11 20:56:04.762710: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Starting 1 0
+Done 1 0
+Starting 1 1
+Done 1 1
+Starting 1 2
+Done 1 2
+Starting 1 3
+Done 1 3
+Starting 1 4
+Done 1 4
+Starting 1 5
+Done 1 5
+Starting 1 6
+Done 1 6
+Starting 1 7
+Done 1 7
+Starting 1 8
+Done 1 8
+Starting 1 9
+Done 1 9
+Starting 2 0
+Done 2 0
+Starting 2 1
+Done 2 1
+Starting 2 2
+Done 2 2
+Starting 2 3
+Done 2 3
+Starting 2 4
+Done 2 4
+Starting 2 5
+Done 2 5
+Starting 2 6
+Done 2 6
+Starting 2 7
+Done 2 7
+Starting 2 8
+Done 2 8
+Starting 2 9
+Done 2 9
+Starting 3 0
+Done 3 0
+Starting 3 1
+Done 3 1
+Starting 3 2
+Done 3 2
+Starting 3 3
+Done 3 3
+Starting 3 4
+Done 3 4
+Starting 3 5
+Done 3 5
+Starting 3 6
+Done 3 6
+Starting 3 7
+Done 3 7
+Starting 3 8
+Done 3 8
+Starting 3 9
+Done 3 9
+Starting 4 0
+Done 4 0
+Starting 4 1
+Done 4 1
+Starting 4 2
+Done 4 2
+Starting 4 3
+Done 4 3
+Starting 4 4
+Done 4 4
+Starting 4 5
+Done 4 5
+Starting 4 6
+Done 4 6
+Starting 4 7
+Done 4 7
+Starting 4 8
+Done 4 8
+Starting 4 9
+Done 4 9
+Starting 5 0
+Done 5 0
+Starting 5 1
+Done 5 1
+Starting 5 2
+Done 5 2
+Starting 5 3
+Done 5 3
+Starting 5 4
+Done 5 4
+Starting 5 5
+Done 5 5
+Starting 5 6
+Done 5 6
+Starting 5 7
+Done 5 7
+Starting 5 8
+Done 5 8
+Starting 5 9
+Done 5 9
+Starting 6 0
+Done 6 0
+Starting 6 1
+Done 6 1
+Starting 6 2
+Done 6 2
+Starting 6 3
+Done 6 3
+Starting 6 4
+Done 6 4
+Starting 6 5
+Done 6 5
+Starting 6 6
+Done 6 6
+Starting 6 7
+Done 6 7
+Starting 6 8
+Done 6 8
+Starting 6 9
+Done 6 9
+Starting 1 0
+Done 1 0
+Starting 1 1
+Done 1 1
+Starting 1 2
+Done 1 2
+Starting 1 3
+Done 1 3
+Starting 1 4
+Done 1 4
+Starting 1 5
+Done 1 5
+Starting 1 6
+Done 1 6
+Starting 1 7
+Done 1 7
+Starting 1 8
+Done 1 8
+Starting 1 9
+Done 1 9
+Starting 2 0
+Done 2 0
+Starting 2 1
+Done 2 1
+Starting 2 2
+Done 2 2
+Starting 2 3
+Done 2 3
+Starting 2 4
+Done 2 4
+Starting 2 5
+Done 2 5
+Starting 2 6
+Done 2 6
+Starting 2 7
+Done 2 7
+Starting 2 8
+Done 2 8
+Starting 2 9
+Done 2 9
+Starting 3 0
+Done 3 0
+Starting 3 1
+Done 3 1
+Starting 3 2
+Done 3 2
+Starting 3 3
+Done 3 3
+Starting 3 4
+Done 3 4
+Starting 3 5
+Done 3 5
+Starting 3 6
+Done 3 6
+Starting 3 7
+Done 3 7
+Starting 3 8
+Done 3 8
+Starting 3 9
+Done 3 9
+Starting 4 0
+Done 4 0
+Starting 4 1
+Done 4 1
+Starting 4 2
+Done 4 2
+Starting 4 3
+Done 4 3
+Starting 4 4
+Done 4 4
+Starting 4 5
+Done 4 5
+Starting 4 6
+Done 4 6
+Starting 4 7
+Done 4 7
+Starting 4 8
+Done 4 8
+Starting 4 9
+Done 4 9
+Starting 5 0
+Done 5 0
+Starting 5 1
+Done 5 1
+Starting 5 2
+Done 5 2
+Starting 5 3
+Done 5 3
+Starting 5 4
+Done 5 4
+Starting 5 5
+Done 5 5
+Starting 5 6
+Done 5 6
+Starting 5 7
+Done 5 7
+Starting 5 8
+Done 5 8
+Starting 5 9
+Done 5 9
+Starting 6 0
+Done 6 0
+Starting 6 1
+Done 6 1
+Starting 6 2
+Done 6 2
+Starting 6 3
+Done 6 3
+Starting 6 4
+Done 6 4
+Starting 6 5
+Done 6 5
+Starting 6 6
+Done 6 6
+Starting 6 7
+Done 6 7
+Starting 6 8
+Done 6 8
+Starting 6 9
+Done 6 9
+Starting 1 0
+Done 1 0
+Starting 1 1
+Done 1 1
+Starting 1 2
+Done 1 2
+Starting 1 3
+Done 1 3
+Starting 1 4
+Done 1 4
+Starting 1 5
+Done 1 5
+Starting 1 6
+Done 1 6
+Starting 1 7
+Done 1 7
+Starting 1 8
+Done 1 8
+Starting 1 9
+Done 1 9
+Starting 2 0
+Done 2 0
+Starting 2 1
+Done 2 1
+Starting 2 2
+Done 2 2
+Starting 2 3
+Done 2 3
+Starting 2 4
+Done 2 4
+Starting 2 5
+Done 2 5
+Starting 2 6
+Done 2 6
+Starting 2 7
+Done 2 7
+Starting 2 8
+Done 2 8
+Starting 2 9
+Done 2 9
+Starting 3 0
+Done 3 0
+Starting 3 1
+Done 3 1
+Starting 3 2
+Done 3 2
+Starting 3 3
+Done 3 3
+Starting 3 4
+Done 3 4
+Starting 3 5
+Done 3 5
+Starting 3 6
+Done 3 6
+Starting 3 7
+Done 3 7
+Starting 3 8
+Done 3 8
+Starting 3 9
+Done 3 9
+Starting 4 0
+Done 4 0
+Starting 4 1
+Done 4 1
+Starting 4 2
+Done 4 2
+Starting 4 3
+Done 4 3
+Starting 4 4
+Done 4 4
+Starting 4 5
+Done 4 5
+Starting 4 6
+Done 4 6
+Starting 4 7
+Done 4 7
+Starting 4 8
+Done 4 8
+Starting 4 9
+Done 4 9
+Starting 5 0
+Done 5 0
+Starting 5 1
+Done 5 1
+Starting 5 2
+Done 5 2
+Starting 5 3
+Done 5 3
+Starting 5 4
+Done 5 4
+Starting 5 5
+Done 5 5
+Starting 5 6
+Done 5 6
+Starting 5 7
+Done 5 7
+Starting 5 8
+Done 5 8
+Starting 5 9
+Done 5 9
+Starting 6 0
+Done 6 0
+Starting 6 1
+Done 6 1
+Starting 6 2
+Done 6 2
+Starting 6 3
+Done 6 3
+Starting 6 4
+Done 6 4
+Starting 6 5
+Done 6 5
+Starting 6 6
+Done 6 6
+Starting 6 7
+Done 6 7
+Starting 6 8
+Done 6 8
+Starting 6 9
+Done 6 9
+Starting 1 0
+Done 1 0
+Starting 1 1
+Done 1 1
+Starting 1 2
+Done 1 2
+Starting 1 3
+Done 1 3
+Starting 1 4
+Done 1 4
+Starting 1 5
+Done 1 5
+Starting 1 6
+Done 1 6
+Starting 1 7
+Done 1 7
+Starting 1 8
+Done 1 8
+Starting 1 9
+Done 1 9
+Starting 2 0
+Done 2 0
+Starting 2 1
+Done 2 1
+Starting 2 2
+Done 2 2
+Starting 2 3
+Done 2 3
+Starting 2 4
+Done 2 4
+Starting 2 5
+Done 2 5
+Starting 2 6
+Done 2 6
+Starting 2 7
+Done 2 7
+Starting 2 8
+Done 2 8
+Starting 2 9
+Done 2 9
+Starting 3 0
+Done 3 0
+Starting 3 1
+Done 3 1
+Starting 3 2
+Done 3 2
+Starting 3 3
+Done 3 3
+Starting 3 4
+Done 3 4
+Starting 3 5
+Done 3 5
+Starting 3 6
+Done 3 6
+Starting 3 7
+Done 3 7
+Starting 3 8
+Done 3 8
+Starting 3 9
+Done 3 9
+Starting 4 0
+Done 4 0
+Starting 4 1
+Done 4 1
+Starting 4 2
+Done 4 2
+Starting 4 3
+Done 4 3
+Starting 4 4
+Done 4 4
+Starting 4 5
+Done 4 5
+Starting 4 6
+Done 4 6
+Starting 4 7
+Done 4 7
+Starting 4 8
+Done 4 8
+Starting 4 9
+Done 4 9
+Starting 5 0
+Done 5 0
+Starting 5 1
+Done 5 1
+Starting 5 2
+Done 5 2
+Starting 5 3
+Done 5 3
+Starting 5 4
+Done 5 4
+Starting 5 5
+Done 5 5
+Starting 5 6
+Done 5 6
+Starting 5 7
+Done 5 7
+Starting 5 8
+Done 5 8
+Starting 5 9
+Done 5 9
+Starting 6 0
+Done 6 0
+Starting 6 1
+Done 6 1
+Starting 6 2
+Done 6 2
+Starting 6 3
+Done 6 3
+Starting 6 4
+Done 6 4
+Starting 6 5
+Done 6 5
+Starting 6 6
+Done 6 6
+Starting 6 7
+Done 6 7
+Starting 6 8
+Done 6 8
+Starting 6 9
+Done 6 9
+Starting 1 0
+Done 1 0
+Starting 1 1
+Done 1 1
+Starting 1 2
+Done 1 2
+Starting 1 3
+Done 1 3
+Starting 1 4
+Done 1 4
+Starting 1 5
+Done 1 5
+Starting 1 6
+Done 1 6
+Starting 1 7
+Done 1 7
+Starting 1 8
+Done 1 8
+Starting 1 9
+Done 1 9
+Starting 2 0
+Done 2 0
+Starting 2 1
+Done 2 1
+Starting 2 2
+Done 2 2
+Starting 2 3
+Done 2 3
+Starting 2 4
+Done 2 4
+Starting 2 5
+Done 2 5
+Starting 2 6
+Done 2 6
+Starting 2 7
+Done 2 7
+Starting 2 8
+Done 2 8
+Starting 2 9
+Done 2 9
+Starting 3 0
+Done 3 0
+Starting 3 1
+Done 3 1
+Starting 3 2
+Done 3 2
+Starting 3 3
+Done 3 3
+Starting 3 4
+Done 3 4
+Starting 3 5
+Done 3 5
+Starting 3 6
+Done 3 6
+Starting 3 7
+Done 3 7
+Starting 3 8
+Done 3 8
+Starting 3 9
+Done 3 9
+Starting 4 0
+Done 4 0
+Starting 4 1
+Done 4 1
+Starting 4 2
+Done 4 2
+Starting 4 3
+Done 4 3
+Starting 4 4
+Done 4 4
+Starting 4 5
+Done 4 5
+Starting 4 6
+Done 4 6
+Starting 4 7
+Done 4 7
+Starting 4 8
+Done 4 8
+Starting 4 9
+Done 4 9
+Starting 5 0
+Done 5 0
+Starting 5 1
+Done 5 1
+Starting 5 2
+Done 5 2
+Starting 5 3
+Done 5 3
+Starting 5 4
+Done 5 4
+Starting 5 5
+Done 5 5
+Starting 5 6
+Done 5 6
+Starting 5 7
+Done 5 7
+Starting 5 8
+Done 5 8
+Starting 5 9
+Done 5 9
+Starting 6 0
+Done 6 0
+Starting 6 1
+Done 6 1
+Starting 6 2
+Done 6 2
+Starting 6 3
+Done 6 3
+Starting 6 4
+Done 6 4
+Starting 6 5
+Done 6 5
+Starting 6 6
+Done 6 6
+Starting 6 7
+Done 6 7
+Starting 6 8
+Done 6 8
+Starting 6 9
+Done 6 9
+Starting 1 0
+Done 1 0
+Starting 1 1
+Done 1 1
+Starting 1 2
+Done 1 2
+Starting 1 3
+Done 1 3
+Starting 1 4
+Done 1 4
+Starting 1 5
+Done 1 5
+Starting 1 6
+Done 1 6
+Starting 1 7
+Done 1 7
+Starting 1 8
+Done 1 8
+Starting 1 9
+Done 1 9
+Starting 2 0
+Done 2 0
+Starting 2 1
+Done 2 1
+Starting 2 2
+Done 2 2
+Starting 2 3
+Done 2 3
+Starting 2 4
+Done 2 4
+Starting 2 5
+Done 2 5
+Starting 2 6
+Done 2 6
+Starting 2 7
+Done 2 7
+Starting 2 8
+Done 2 8
+Starting 2 9
+Done 2 9
+Starting 3 0
+Done 3 0
+Starting 3 1
+Done 3 1
+Starting 3 2
+Done 3 2
+Starting 3 3
+Done 3 3
+Starting 3 4
+Done 3 4
+Starting 3 5
+Done 3 5
+Starting 3 6
+Done 3 6
+Starting 3 7
+Done 3 7
+Starting 3 8
+Done 3 8
+Starting 3 9
+Done 3 9
+Starting 4 0
+Done 4 0
+Starting 4 1
+Done 4 1
+Starting 4 2
+Done 4 2
+Starting 4 3
+Done 4 3
+Starting 4 4
+Done 4 4
+Starting 4 5
+Done 4 5
+Starting 4 6
+Done 4 6
+Starting 4 7
+Done 4 7
+Starting 4 8
+Done 4 8
+Starting 4 9
+Done 4 9
+Starting 5 0
+Done 5 0
+Starting 5 1
+Done 5 1
+Starting 5 2
+Done 5 2
+Starting 5 3
+Done 5 3
+Starting 5 4
+Done 5 4
+Starting 5 5
+Done 5 5
+Starting 5 6
+Done 5 6
+Starting 5 7
+Done 5 7
+Starting 5 8
+Done 5 8
+Starting 5 9
+Done 5 9
+Starting 6 0
+Done 6 0
+Starting 6 1
+Done 6 1
+Starting 6 2
+Done 6 2
+Starting 6 3
+Done 6 3
+Starting 6 4
+Done 6 4
+Starting 6 5
+Done 6 5
+Starting 6 6
+Done 6 6
+Starting 6 7
+Done 6 7
+Starting 6 8
+Done 6 8
+Starting 6 9
+Done 6 9
