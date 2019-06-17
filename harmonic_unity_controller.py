@@ -11,4 +11,4 @@ for n in range(1, 7):
                                     n=n, id=id, domain=(-4,4.), learning_rate=0.001,
                                     normalize=False
                                 )
-        print('Done', n,id)
+        print('Done', n, id)

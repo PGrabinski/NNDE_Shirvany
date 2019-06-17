@@ -39,7 +39,7 @@ class Solution(tf.keras.models.Model):
 
     def train(self, X, loss_function, epochs, conditions, eigen_value, verbose=True,
                 message_frequency=1, learning_rate=0.1, boundary_multiplier=10,
-                optimizer_name='Adam'):
+                optimizer_name='Adam', **kwargs):
         
         # Checking for the right parameters
         if not isinstance(epochs, int) or epochs < 1:
@@ -72,7 +72,7 @@ class Solution(tf.keras.models.Model):
         @tf.function
         def train_step(X, conditions, eigen_value):
             with tf.GradientTape() as tape:
-                loss = loss_function(self, X, eigen_value)
+                loss = loss_function(self, X, eigen_value, **kwargs)
             gradients = tape.gradient(loss, self.trainable_variables)
             optimizer.apply_gradients(
                         zip(gradients, self.trainable_variables))
@@ -119,7 +119,10 @@ def loss_well(network, X, eigen_value):
     
     return tf.math.reduce_mean(loss)
 
-def loss_well_unity(network, X, eigen_value):
+def loss_well_unity(network, X, eigen_value, **kwargs):
+    probability_weight = 1
+    if 'probability_weight' in kwargs:
+        probability_weight=kwargs['probability_weight']
     X = tf.convert_to_tensor(X)
     # Taking the frist (grads) and the second (laplace) derivatives w. r. t. inputs
     with tf.GradientTape() as tape1:
@@ -137,7 +140,7 @@ def loss_well_unity(network, X, eigen_value):
     interval = X[1]-X[0]
     probability_unity = tf.math.reduce_sum(response**2) * interval 
     probability_unity = (probability_unity - 1) **2
-    loss = tf.math.reduce_mean(loss) + probability_unity
+    loss = tf.math.reduce_mean(loss) + probability_weight * probability_unity
     return loss
 
 def well_analytic(X, n, L, **kwargs):
@@ -214,7 +217,7 @@ def eigen_value_harmonic(n, **kwargs):
     return n + 0.5
 
 def train_plot_save(loss_function, eigen_value_function, analytic_solution, dir, name, n, id, domain, learning_rate=0.001, n_h=105,
-    epochs=100000, normalize=True):
+    epochs=100000, normalize=True, **kwargs):
     sol = Solution(n_i=1, n_h=n_h, n_o=2)
     X_train, X_test = train_test_domain_a_to_b(*domain, 200)
     bcs = zero_boundary_conditions(*domain)
@@ -222,7 +225,7 @@ def train_plot_save(loss_function, eigen_value_function, analytic_solution, dir,
     b = domain[1]
     sol.train(X=X_train, conditions=bcs, eigen_value=eigen_value_function(n, L=b-a), loss_function=loss_function,
             epochs=epochs, verbose=False, boundary_multiplier=0.1,
-            learning_rate=learning_rate, optimizer_name='Adam')
+            learning_rate=learning_rate, optimizer_name='Adam', **kwargs)
     y_train = sol(tf.convert_to_tensor(X_train)).numpy()
     if normalize:
         train_normalization = (y_train**2).sum()*(b-a)/y_train.shape[0]
