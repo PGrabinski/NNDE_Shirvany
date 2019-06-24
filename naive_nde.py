@@ -27,7 +27,7 @@ class Solution(tf.keras.models.Model):
 
     def call(self, X):
         # Conversion to a tensor
-        X = tf.convert_to_tensor(X)
+        X = tf.convert_to_tensor(X, dtype='float64')
 
         # Simple Shallow Network Response
         response = self.hidden_layer(X)
@@ -37,10 +37,24 @@ class Solution(tf.keras.models.Model):
 
         return response
 
+    def loss_boundary(self, conditions, boundary_multiplier):
+        loss = tf.constant(0., shape=(1,), dtype='float64')
+        for condition in conditions:
+            X = tf.convert_to_tensor(np.array([condition['value']]).reshape((1,1)), dtype=tf.float64)
+            boundary_response = tf.reshape(self(X), shape=(-1,))
+            boundary_value = condition['function'](X)
+            boundary_value = tf.reshape(boundary_value, shape=(-1,))
+            loss += (boundary_response - boundary_value) ** 2
+        loss = boundary_multiplier*tf.math.reduce_sum(loss)
+        return loss
+
+    def total_loss(self, X, eigen_value, conditions, boundary_multiplier):
+        return self.loss_boundary(conditions, boundary_multiplier) + self.loss_function(self, X, eigen_value)   
+        
     def train(self, X, loss_function, epochs, conditions, eigen_value, verbose=True,
                 message_frequency=1, learning_rate=0.1, boundary_multiplier=10,
                 optimizer_name='Adam', **kwargs):
-        
+        self.loss_function = loss_function
         # Checking for the right parameters
         if not isinstance(epochs, int) or epochs < 1:
             raise Exception('epochs parameter should be a positive integer.')
@@ -56,28 +70,17 @@ class Solution(tf.keras.models.Model):
             optimizer = tf.keras.optimizers.SGD(learning_rate=learning_rate)
         elif optimizer_name == 'Adagrad':
             optimizer = tf.keras.optimizers.Adagrad(learning_rate=learning_rate)
-        
-        def loss_boundary(network, conditions):
-            loss = tf.constant(0., shape=(1,), dtype='float64')
-            for condition in conditions:
-                X = tf.convert_to_tensor(np.array([condition['value']]).reshape((1,1)))
-                boundary_response = tf.reshape(network(X), shape=(-1,))
-                boundary_value = condition['function'](X)
-                boundary_value = tf.reshape(boundary_value, shape=(-1,))
-                loss += (boundary_response - boundary_value) ** 2
-            loss = boundary_multiplier*tf.math.reduce_sum(loss)
-            return loss
 
         # Single train step function for the unsupervised equation part
         @tf.function
         def train_step(X, conditions, eigen_value):
             with tf.GradientTape() as tape:
-                loss = loss_function(self, X, eigen_value, **kwargs)
+                loss = self.loss_function(self, X, eigen_value, **kwargs)
             gradients = tape.gradient(loss, self.trainable_variables)
             optimizer.apply_gradients(
                         zip(gradients, self.trainable_variables))
             with tf.GradientTape() as tape2:
-                loss = loss_boundary(self, conditions)
+                loss = self.loss_boundary(conditions, boundary_multiplier)
             gradients = tape2.gradient(loss, self.trainable_variables)
             optimizer.apply_gradients(
                         zip(gradients, self.trainable_variables))
@@ -85,12 +88,14 @@ class Solution(tf.keras.models.Model):
         # Training for a given number of epochs
         for epoch in range(epochs):
             train_step(X, conditions, eigen_value)
-            equation_loss = loss_function(self, X, eigen_value)
-            boundary_loss = loss_boundary(self, conditions)
+            equation_loss = self.loss_function(self, X, eigen_value)
+            boundary_loss = self.loss_boundary(conditions, boundary_multiplier)
             if verbose and(epoch+1) % message_frequency == 0:
                 print(f'Epoch: {epoch+1} Loss equation: \
                     {equation_loss.numpy()} \
                     Loss boundary: {boundary_loss.numpy()}')
+        
+        return self.total_loss(X, eigen_value, conditions, boundary_multiplier)
 
 def train_test_domain_a_to_b(a=0, b=4, n=200):
     X_train = np.arange(a, b, (b-a)/n) + 1e-8
@@ -148,9 +153,9 @@ def well_analytic(X, n, L, **kwargs):
     return Y
 
 def zero_boundary_conditions(a, b):
-    bcs = [{'variable':0, 'value':a, 'type':'dirichlet',
+    bcs = [{'variable':0., 'value':a, 'type':'dirichlet',
             'function':constant(0.)},
-        {'variable':0, 'value':b, 'type':'dirichlet',
+        {'variable':0., 'value':b, 'type':'dirichlet',
             'function':constant(0.)}]
     return bcs
 
