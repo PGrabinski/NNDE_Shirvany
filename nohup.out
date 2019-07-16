@@ -10417,3 +10417,23 @@ W0716 14:15:57.422682 139684058830656 deprecation.py:323] From /home/pgrabinski/
 Instructions for updating:
 Use tf.where in 2.0, which has the same broadcast rule as np.where
 2019-07-16 14:16:00.020662: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Starting 0 0
+Done 0 0
+Starting 0 1
+Done 0 1
+Starting 0 2
+Done 0 2
+Starting 0 3
+Done 0 3
+Starting 0 4
+Done 0 4
+Starting 0 5
+Done 0 5
+Starting 0 6
+Done 0 6
+Starting 0 7
+Done 0 7
+Starting 0 8
+Done 0 8
+Starting 0 9
+Done 0 9
