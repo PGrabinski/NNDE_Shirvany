@@ -1,6 +1,6 @@
 import naive_nde
 
-for n in range(1, 7):
+for n in range(0, 1):
     for id in range(10):
         print('Starting', n, id)
         naive_nde.train_plot_save(loss_function=naive_nde.loss_harmonic_unity, 
