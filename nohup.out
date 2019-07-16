@@ -10402,4 +10402,18 @@ Rising the eigen value number 205
 Loss: [1.] for n: 42.090000000000195
 Rising the eigen value number 206
 Loss: [1.] for n: 42.10000000000019
-Rising the eigen value number 207
+Rising the eigen value number 2072019-07-16 14:15:56.351082: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2019-07-16 14:15:56.351140: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2019-07-16 14:15:56.351184: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (localhost.localdomain): /proc/driver/nvidia/version does not exist
+2019-07-16 14:15:56.351552: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-07-16 14:15:56.364129: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1696220000 Hz
+2019-07-16 14:15:56.365026: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55977eebfb90 executing computations on platform Host. Devices:
+2019-07-16 14:15:56.365064: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING: Logging before flag parsing goes to stderr.
+W0716 14:15:57.230602 139684058830656 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:175: setdiff1d (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2018-11-30.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.sets.difference().
+W0716 14:15:57.422682 139684058830656 deprecation.py:323] From /home/pgrabinski/anaconda3/envs/nde2/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1205: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-07-16 14:16:00.020662: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
